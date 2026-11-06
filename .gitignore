@@ -1,0 +1,10 @@
+**/bin/
+**/obj/
+**/Logs/
+**/wwwroot/Files/*
+!**/wwwroot/Files/.gitkeep
+.vs/
+*.user
+*.suo
+appsettings.Local.json
+**/App_Data/

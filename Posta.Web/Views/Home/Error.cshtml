@@ -1,0 +1,3 @@
+@model ErrorInfo
+@{ ViewData["Title"] = "Помилка"; }
+<div class="panel"><p class="eyebrow">ЩОСЬ ПІШЛО НЕ ТАК</p><h1>Не вдалося виконати дію.</h1><p>Спробуйте ще раз. Код звернення: <code>@Model.RequestId</code></p><a class="btn btn-primary" asp-controller="Home" asp-action="Index">На головну</a></div>

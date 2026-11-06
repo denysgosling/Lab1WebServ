@@ -1,0 +1,13 @@
+@{ var current = ViewContext.RouteData.Values["controller"]?.ToString(); }
+<!DOCTYPE html><html lang="uk"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>@ViewData["Title"] · Posta</title>
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" /></head>
+<body><a class="skip-link" href="#main">Перейти до вмісту</a><div id="wrapper">
+<aside id="sidebar-wrapper"><a class="brand" asp-controller="Home" asp-action="Index"><span class="brand-mark">p.</span>posta<span class="brand-dot">●</span></a>
+<div class="sidebar-label">РОБОЧИЙ ПРОСТІР</div><nav aria-label="Головна навігація"><a class="nav-item @(current == "Home" ? "active" : "")" asp-controller="Home" asp-action="Index"><span aria-hidden="true">◫</span>Огляд</a></nav>
+<div class="sidebar-bottom"><span class="status-dot"></span> Локальний простір</div></aside>
+<div id="page-content-wrapper"><header class="topbar"><div class="breadcrumb-line">Мій простір <span>/</span> <strong>@ViewData["Title"]</strong></div><div class="profile"><span class="small-label">ОСОБИСТИЙ ПРОСТІР</span><span class="avatar">P</span></div></header>
+<main id="main">@RenderBody()</main><footer>Posta — місце для ваших повідомлень і файлів.<span>Posta</span></footer></div></div>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script><script src="~/js/site.js" asp-append-version="true"></script>
+@await RenderSectionAsync("Scripts", required: false)</body></html>
